@@ -6,7 +6,7 @@ Replicate Frontend Designs of stunning websites
 
 
 <p align='center'>
-<img src='images/wonder.me.png' alt='wonder, site screenshot'>
+<img src='readme/wonder.me.png' alt='wonder, site screenshot'>
 </p>
 
 Wonder is a virtual space where people can meet and talk.
@@ -15,7 +15,7 @@ Online gatherings that are [fun || social || better].
 - [Superpeer](https://superpeer.com/)
 
 <p align='center'>
-<img src='images/superpeer.png' alt='superpeer, site screenshot'>
+<img src='readme/superpeer.png' alt='superpeer, site screenshot'>
 </p>
 
 A video platform for the world’s leading minds.
@@ -25,7 +25,7 @@ Superpeer gives you the tools you need to have paid 1:1 video calls and livestre
 - [The Clearleft Podcast](https://podcast.clearleft.com/)
 
 <p align='center'>
-<img src='images/the_clearleft.png' alt='clearleft, site screenshot'>
+<img src='readme/the_clearleft.png' alt='clearleft, site screenshot'>
 </p>
 
 - [More finds]() - Go here
