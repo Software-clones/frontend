@@ -1,10 +1,14 @@
 :root {
     --ink-colour: rgb(255,255,255);
-    --ink-knockback-colour: rgb(153,153,153);
+    --grey-colour: rgb(153,153,153);
     --page-colour: rgb(25,25,25);
-    --page-knockback-colour: rgb(37,51,58);
+    --footer-colour: rgb(37,51,58);
     --link-colour: rgb(33,153,234);
     --link-decoration-colour: rgb(234,33,90);
+    --icon-podcast-colour: #a479e2;
+    --icon-spotify-colour: #9bd44e;
+    --icon-rss-colour: #ee802f
+    ;
     --copy-fontstack: "Adelle Sans", "Droid Sans", -apple-system, "Helvetica Neue", "Segoe UI", "Arial", sans-serif;
     --heading-fontstack: "Gilroy", "Avenir", "Century Gothic", -apple-system, "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
 }
@@ -39,19 +43,39 @@ body {
   font-family: var(--copy-fontstack);
   font-size: 1rem;
   line-height: 1.5;
-  /* color: var(--ink-colour);
-  background-color: var(--page-colour);
+  color: var(--ink-colour);
+  /* background-color: var(--page-colour);
   min-height: 100vh;
   display: flex;
-  flex-direction: column;  */
+  flex-direction: column;   */
 }
 /* Header styles */
+/* Header image */
+
+/*===== Global Styles =====*/
+.container {
+    max-width: 45em !important;
+}
+
+/* Links */
+body a {
+    text-decoration: none;
+    color: inherit;
+}
+body a:hover, a:focus {
+    color: var(--link-decoration-colour);
+}
+
+#header__image {
+    max-width: 370px;
+    /* max-width: 335px; */
+}
 #header {
     font-family: var(--heading-fontstack);
     font-weight: 800;
     cursor: pointer;
 }
-#header a {
+#header .header__title {
     text-decoration: none;
     color: var(--page-colour);
 }
@@ -68,9 +92,6 @@ body {
     margin: 0;
     transition: font-size  2s;
 }
-#header .header__title a:hover, #header .header__title a:focus {
-    color: var(--link-decoration-colour);
-}
 #header .header__logo {
     max-width: 154px;
     max-height: 54px;
@@ -82,10 +103,19 @@ body {
     border-radius: 0.25em;
     padding: 0.25em;
     padding-left: 0.75em;
-    
+    text-transform: uppercase;
 }
 #header .feed a {
     color: var(--ink-colour);
+}
+#header .feed a.podcast:hover, #header .feed a.podcast:focus {
+    color: var(--icon-podcast-colour);
+}
+#header .feed a.spotify:hover, #header .feed a.spotify:focus {
+    color: var(--icon-spotify-colour);
+}
+#header .feed a.rss:hover, #header .feed a.rss:focus {
+    color: var(--icon-rss-colour);
 }
 
 #header .feed img {
@@ -93,6 +123,74 @@ body {
 }
 
 
+/* Episodes section */
+#episodes {
+    background-color: var(--page-colour);
+    padding: 2rem 0 4rem;
+    font-size: 1rem;
+}
+#episodes .episode__season {
+    font-size: 1rem;
+    color: var(--grey-colour);
+    padding-bottom: 30px;
+}
+#episodes .episode__details {
+    font-size: 1rem;
+    color: var(--ink-colour);
+}
+#episodes .episode__title {
+    font-size: 3rem;
+    font-weight: 800;
+}
+#episodes .episode__caption {
+}
+#episodes .episode__link {
+    color: var(--link-colour);
+}
+#episodes .episode__link a {
+    border-bottom: 4px solid var(--link-decoration-colour);
+}
+
+
+/* Footer styles */
+.footer {
+    background-color: var(--footer-colour);
+    color: var(--ink-colour);
+    padding: 2rem 0;
+}
+.footer .footer__title {
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.footer .footer__feed {
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 1rem;
+}
+.footer .footer__feed li {
+    font-size: 0.8rem;
+    display: inline-block;
+    /* spacing the feeds list  */
+    padding: 0 24px 8px 0;
+}
+.footer .footer__info {
+    font-size: 0.8rem;
+    padding-bottom: 1rem
+}
+
+.footer img:hover {
+    /* Image color changes on hover
+    * Use CSS filter to change the colors
+    *   Filter generated from: https://tests.christianoliff.com/hex-to-css-filter-generator/
+    *   Target color: #00dc9c 
+    *   Result: invert(56%) sepia(98%) saturate(929%) hue-rotate(116deg) brightness(97%) contrast(104%);
+    */
+    -webkit-filter: invert(56%) sepia(98%) saturate(929%) hue-rotate(116deg) brightness(97%) contrast(104%);
+    filter: invert(56%) sepia(98%) saturate(929%) hue-rotate(116deg) brightness(97%) contrast(104%);
+}
 
 /*****  Breakpoints ***** /
 
